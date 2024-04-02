@@ -37,6 +37,7 @@ class NoiseTexturize(Augmentation):
     ):
         """Constructor method"""
         super().__init__(p=p)
+        assert turbulence_range[0] > 1
         self.sigma_range = sigma_range
         self.turbulence_range = turbulence_range
         self.texture_width_range = texture_width_range
